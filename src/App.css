@@ -1,38 +1,42 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.todo {
+  background-color: rgba(172, 215, 14, 0.735);
+  border-radius: 10px;
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: auto;
+  box-shadow: 5px 5px 10px rgba(152, 192, 8, 0.735);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  width: 100px;
+  height: 30px;
+  background-color: sandybrown;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 20px;
+}
+
+.taskInput {
+  width: 350px;
+  height: 30px;
+  border: none;
+  border-radius: 9px;
+}
+
+.taskInput::placeholder {
+  text-align: center;
+  font-size: medium;
 }
