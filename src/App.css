@@ -35,6 +35,7 @@ button {
   border: none;
   border-radius: 9px;
   text-align: center;
+  font-size: medium;
 }
 
 .input::placeholder {
@@ -45,4 +46,8 @@ button {
 .input:focus {
   outline: none;
   border: 2px solid rgb(152, 192, 8);
+}
+
+.task {
+  margin: 20px;
 }
