@@ -29,14 +29,20 @@ button {
   margin-left: 20px;
 }
 
-.taskInput {
+.input{
   width: 350px;
   height: 30px;
   border: none;
   border-radius: 9px;
+  text-align: center;
 }
 
-.taskInput::placeholder {
+.input::placeholder {
   text-align: center;
   font-size: medium;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid rgb(152, 192, 8);
 }

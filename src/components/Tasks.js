@@ -1,21 +1,47 @@
 import { useState } from "react"
 
-export default function Tasks(params) {
+export default function Tasks() {
 
     const [input, setInput] = useState('')
+    const [list, setList] = useState([]);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setInput("")
-        console.log(input)
+    const handleAdd = () => {
+        const newTask = {
+            id: Math.random(),
+            todo: input
+        };
 
-    }
+        setList([...list, newTask]);
+        setInput('');
+    };
+
+    const handleDelete = (id) => {
+        const newList = list.filter((todo) => todo.id !== id);
+        setList(newList);
+    };
+
+
+
+    const handleInputChange = (event) => {
+        setInput(event.target.value);
+    };
 
     return (
         <div className="todo">
             <h1>TO-DO LISTS</h1>
-            <input type='text' value={input} placeholder="Add item..." className="taskInput" onChange={(e) => setInput(e.target.value)} />
-            <button type="submit" id="submit" onClick={handleSubmit}>Add Task</button>
-        </div>
+            <input className="input" type="text" value={input} onChange={handleInputChange} placeholder="Add Tasks...." />
+            <button className="btn" onClick={handleAdd}>ADD</button>
+
+            <ul>
+                {list.map((todo) => (
+                    <li className="task" key={todo.id}>
+                        {todo.todo}
+                        <button onClick={() => handleDelete(todo.id)}>
+                            Delete
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </div >
     )
 };
