@@ -17,6 +17,16 @@
   box-shadow: 5px 5px 10px rgba(152, 192, 8, 0.735);
 }
 
+@media  screen and (max-width : 700px) {
+  .todo {
+    width: 100%;
+  }
+  
+  .btn {
+    margin-top: 20px;
+  }
+}
+
 button {
   width: 100px;
   height: 30px;
@@ -50,4 +60,6 @@ button {
 
 .task {
   margin: 20px;
+  list-style-type: none;
+  text-align: center;
 }
